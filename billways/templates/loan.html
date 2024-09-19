@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Products</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .header {
+            background-color: #1261A0;
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+        }
+      
+
+        .loan-section {
+            padding: 50px 0;
+            background-color: #f8f9fa;
+        }
+
+        .loan-card {
+            border: none;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+          .loan-card .hidden-content {
+            display: none;
+            text-align: left; /* Align text to the left */
+        }
+
+        .loan-card .hidden-content ul {
+            padding-left: 20px; /* Add padding for indentation */
+            margin: 10px 0; /* Adjust margin for spacing */
+        }
+
+        .loan-card .hidden-content li {
+            margin-bottom: 5px; /* Adjust bottom margin for spacing between items */
+        }
+
+        .loan-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+        }
+      
+
+        .loan-card .fa-icon {
+            font-size: 3rem;
+            color: #1261A0;
+            margin-bottom: 15px;
+        }
+
+        .loan-card h5 {
+            margin-top: 10px;
+            font-size: 1.5rem;
+        }
+
+        .loan-card p {
+            font-size: 1rem;
+            color: #6c757d;
+        }
+
+        .loan-card .btn-view-more {
+            margin-top: 10px;
+            background-color: #1261A0;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .loan-card .btn-view-more:hover {
+            background-color: #0a4b78;
+        }
+
+        .hidden-content {
+            display: none;
+            margin-top: 10px;
+        
+        }
+          .line-with-word {
+            display: none; /* Hidden by default */
+            margin: 10px 0; /* Margin around the line */
+            text-align: center;
+            position: relative;
+            width: 100%;
+        }
+
+        .line-with-word:before,
+        .line-with-word:after {
+            content: "";
+            display: inline-block;
+            width: 20%;
+            height: 1px;
+            background: #000;
+            vertical-align: middle;
+        }
+
+        .line-with-word:before {
+            margin-right: 10px;
+        }
+
+        .line-with-word:after {
+            margin-left: 10px;
+        }
+
+        .line-with-word span {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        
+        
+
+        footer {
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+        }
+
+        footer .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        footer h5 {
+            margin-bottom: 1rem;
+        }
+
+        footer ul {
+            padding-left: 0;
+        }
+
+        footer ul li {
+            list-style: none;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 767.98px) {
+            .text-md-right {
+                text-align: left !important;
+            }
+            footer .col-md-6 {
+                margin-bottom: 1rem;
+            }
+            footer .container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            footer .contact-item {
+    display: flex;
+    align-items: center;
+}
+
+footer .contact-item i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Loan Products</h1>
+            <p>Explore our variety of loan products designed to meet your financial needs.</p>
+        </div>
+    </header>
+
+    <section class="loan-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="loan-card">
+                        <i class="fas fa-money-check-alt fa-icon"></i>
+                        <h5>Normal Loans</h5>
+                        <p>Get the funds you need for any personal use with our normal loan products.</p>
+                        <div class="line-with-word">
+                    <span>Details</span>
+                </div>
+                        <div class="hidden-content">
+                        
+                                  <ul class="list-unstyled">
+                                    <li>Do you want to stay ahead always,get a loan 3X of your deposits/savings.</li>
+                                    <li>1% p.m for 12 months for first loan,2nd loan up to 36 months</li>
+                                    <li>minimum loan of kshs 5000</li>
+                                    <li>maximum loan of kshs 1000000</li>
+                                    <li>Must be guaranteed by 3 Sacco members</li>
+                                    </ul>
+                                </div>
+
+                        <button class="btn-view-more" onclick="toggleContent(this)">View More</button>
+                    </div>
+                </div>
+
+
+                
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="loan-card">
+                        <i class="fas fa-ambulance fa-icon"></i>
+                        <h5>Emergency Loans</h5>
+                        <p>Access quick funds in times of emergency with minimal documentation.</p>
+                        <div class="line-with-word">
+                    <span>Details</span>
+                </div>
+                        <div class="hidden-content">
+                         <ul class="list-unstyled">
+                            <li>Granted to members to sort urgent needs.</li>
+                            <li>Maximum amount shall be kshs 50,000</li>
+                            <li>Interest rate to be 2% p.m</li>
+                            <li>Can be secured by 70% of your deposits or savings</li>
+                            <li>Repayment period of 6 months applies having been our member for atleast 6 months </li>    
+                          </ul>
+                        </div>
+                        <button class="btn-view-more" onclick="toggleContent(this)">View More</button>
+                    </div>
+                </div>
+
+
+                
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="loan-card">
+                        <i class="fas fa-graduation-cap fa-icon"></i>
+                        <h5>Education Loans</h5>
+                        <p>Invest in your future with our flexible education loan options.</p>
+                                  <div class="line-with-word">
+                    <span>Details</span>
+                </div>
+                        <div class="hidden-content">
+                         <ul class="list-unstyled">
+                            <li>Granted to cater for college and school fees.</li>
+                            <li>The loans are fully guaranteed by deposits/guarantors</li>
+                            <li>Given within x3 factor</li>
+                            <li>School fees structure is attached as a requirement</li>
+                            <li>Repayment period of of 12 months </li>
+                            <li>Interest rate is 1.5% p.m</li>
+                            <li>Maximum loan is kshs 100000</li>
+                         </ul>
+                        </div>
+                        <button class="btn-view-more" onclick="toggleContent(this)">View More</button>
+                    </div>
+                </div>
+
+
+                
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="loan-card">
+                        <i class="fas fa-user-friends fa-icon"></i>
+                           <h5>4. Group/Chama Loan</h5>
+                        <p>Support your group savings goals with our specialized Chama Loans.</p>
+                        <div class="line-with-word">
+                    <span>Details</span>
+                </div>
+                        <div class="hidden-content">                                  
+                     
+                              <ul class="list-unstyled pl-3">
+                                <li><b>Eligibility:</b> This loan is granted to an organized and registered group with a minimum of 6 members.</li>
+                                <li><b>Registration fee:</b> Each group member needs to register with a fee of Kshs 500.</li>
+                                <li><b>Shares:</b>
+                                <ul class="list-unstyled pl-3">
+                                    <li>Initial purchase: The group must purchase 50 shares (Kshs 100/share).</li>
+                                    <li>Monthly top-up: Each member contributes a monthly top-up of 15 shares (Kshs 1,500).</li>
+                                    </ul>
+                                    </li>
+                                    <li>Loan amount: The group can qualify for a loan amount up to 4 times their total deposits/savings.</li>
+                                    <li>Collateral: A 25% upfront saving from the group's total is required as security (collateral).</li>
+                                    <li>Interest rate: The interest rate for this loan is 1% per month.</li>
+                                    <li>Repayment term: The loan repayment period is set for 3 months.</li>
+                                    <li>Minimum loan limits:
+                                  <ul class="list-unstyled pl-3">
+                                    <li>1st loan: Kshs 30,000.</li>
+                                    <li>2nd loan: Kshs 50,000.</li>
+                                    <li>3rd loan: Kshs 100,000.</li>
+                                  </ul>
+                                </li>
+                              </ul>
+                        </div>
+                            <button class="btn-view-more" onclick="toggleContent(this)">View More</button>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="loan-card">
+                        <i class="fas fa-building fa-icon"></i>
+                        <h5>Development Loans</h5>
+                        <p>Finance your development projects with our long-term loan products.</p>
+                        <div class="line-with-word">
+                    <span>Details</span>
+                </div>
+                        <div class="hidden-content">
+                              <ul class="list-unstyled">
+                                <li>Purpose: Empower members for investment and development needs.</li>
+                                <li>Loan amount: 5x applicant deposit.</li>
+                                <li>Repayment term: 60 months.</li>
+                                <li>Maximum limit: Kshs 5,000,000.</li>
+                                <li>Interest rate: 12% p.a. reducing balance.</li>
+                                <li>Fee: 0.4% refinancing fee.</li>
+                                <li>Security: Logbook or title deed.</li>
+                              </ul>
+                        </div>
+                        <button class="btn-view-more" onclick="toggleContent(this)">View More</button>
+                    </div>
+                </div>
+
+                
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="loan-card">
+                        <i class="fas fa-car fa-icon"></i>
+                        <h5>Asset Finance (Logbook Loans)</h5>
+                        <p>Get the financing you need to purchase assets for personal or business use.</p>
+                                  <div class="line-with-word">
+                    <span>Details</span>
+                </div>
+                        <div class="hidden-content">
+                          <ul class="list-unstyled">
+                            <li><b>Minimum deposit:</b>30% of loan amount.</li>
+                            <li><b>Maximum loan:</b> Kshs 3,000,000.</li>
+                            <li><b>Repayment term:</b> 48 months.</li>
+                            <li><b>Membership:</b> Required for asset finance loans.</li>
+                            <li><b>Interest rate:</b>
+                              <ul>
+                                <li>1.5% p/m for Sacco members.</li>
+                                <li>3% p/m for non-members.</li>
+                              </ul>
+                            </li>
+                            <li><b>Eligible assets:</b> Cars, trucks, motorcycles, etc. (see full list).</li>
+                            <li><b>Security:</b> Secured by logbook or title deed.</li>
+                          </ul>
+                        </div>
+                        <button class="btn-view-more" onclick="toggleContent(this)">View More</button>
+                    </div>
+                </div>
+
+                
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="loan-card">
+                        <i class="fas fa-wallet fa-icon"></i>
+                        <h5>Salary Advance</h5>
+                        <p>Bridge the gap between paydays with our convenient salary advance loans.</p>
+                                  <div class="line-with-word">
+                    <span>Details</span>
+                </div>
+                        <div class="hidden-content">
+                           
+                                  <ul class="list-unstyled">
+                                    <li><p><b>Eligibility:</b> Members & non-members (employed).</p></li>
+                                    <li><p><b>Repayment terms:</b></p>
+                                      <ul>
+                                        <li>Civil servants: 120 months (payslip secured).</li>
+                                        <li>Private firms: 6-36 months (employer consent required).</li>
+                                      </ul>
+                                    </li>
+                                    <li><p><b>Interest rate:</b> 1% p/m (reducing balance) for civil servants.</p></li>
+                                    <li><p><b>Maximum loan:</b> Kshs 2,000,000 (subject to additional rules).</p></li>
+                                    <li><p><b>Normal salary advance</b></p>:
+                                      <ul>
+                                        <li>Loan amount: 50% of expected net salary.</li>
+                                        <li>Interest rate: 5% per month.</li>
+                                      </ul>
+                                    </li>
+                                  </ul>
+                        </div>
+                        <button class="btn-view-more" onclick="toggleContent(this)">View More</button>
+                    </div>
+                </div>
+
+
+        <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="loan-card">
+                        <i class="fas fa-wallet fa-icon"></i>
+                        <h5>Health Loan</h5>
+                        <p>Offered in collaboration with trusted insurance providers.</p>
+                                  <div class="line-with-word">
+                    <span>Details</span>
+                </div>
+                        <div class="hidden-content">
+                       
+                                  <ul class="list-unstyled">
+                                    <li>Partnership: Britam, Jubilee Insurance, Nhif.</li>
+                                    <li>Coverage: Can include dependents (details vary).</li>
+                                    <li>Loan amount: Depends on dependents and chosen policy.</li>
+                                    <li>No guarantors required.</li>
+                                    <li>Repayment term: 6 months.</li>
+                                    <li>Interest rate: 2% per month.</li>
+                                  </ul>
+                        </div>
+                        <button class="btn-view-more" onclick="toggleContent(this)">View More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="{% url 'home' %}" class="text-white">Home</a></li>
+                        <li><a href="{% url 'savings' %}" class="text-white">Saving Products</a></li>
+                        <li><a href="{% url 'about' %}" class="text-white">About Us</a></li>
+                        <li><a href="{% url 'blog_list' %}" class="text-white">Blogs</a></li>
+                        <li><h4>Contacts</h4></li>
+                        <li>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+0700032800" class="text-white">0700032800</a>
+                            </div>
+                        </li> 
+                    </ul>
+                </div>
+                <div class="col-md-6 text-md-right">
+                    <h5>Follow Us</h5>
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <a href="https://www.facebook.com/billwayssacco" class="text-white" target="_blank">
+                                <i class="fab fa-facebook fa-2x"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://twitter.com/billwayssaccolass="text-white" target="_blank">
+                                <i class="fab fa-twitter fa-2x"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.instagram.com/billwayssacco" class="text-white" target="_blank">
+                                <i class="fab fa-instagram fa-2x"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.linkedin.com/company/billwayssacco" class="text-white" target="_blank">
+                                <i class="fab fa-linkedin fa-2x"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <h5>Billways Sacco LTD</h5>
+                    <p>&copy; 2024 Billways Sacco LTD. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    
+    <!-- Include JavaScript files -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function toggleContent(button) {
+            var hiddenContent = button.previousElementSibling;
+            const lineWithWord = hiddenContent.previousElementSibling;
+            if (hiddenContent.style.display === "none" || hiddenContent.style.display === "") {
+                hiddenContent.style.display = "block";
+                lineWithWord.style.display = 'block';
+                button.textContent = "Show Less";
+            } else {
+                hiddenContent.style.display = "none";
+                lineWithWord.style.display = 'none';
+                button.textContent = "View More";
+            }
+        }
+    </script>
+</body>
+</html>

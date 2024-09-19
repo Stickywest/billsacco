@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registered Users</title>
+</head>
+<body>
+    <h2>Registered Users</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Surname</th>
+                <th>First Name</th>
+                <th>Middle Name</th>
+                <th>Gender</th>
+                <th>Citizenship</th>
+                <th>Marital Status</th>
+                <th>ID</th>
+                <th>Phone Number</th>
+                <th>Email</th>
+                <th>Type of Employment</th>
+                <th>Company Name</th>
+                <th>Salary</th>
+                <th>Employer Contact</th>
+                <th>Business Name</th>
+                <th>Business Type</th>
+                <th>Business Income</th>
+                <th>Next of Kin Name</th>
+                <th>Next of Kin Phone</th>
+                <th>Relationship</th>
+                <th>ID Upload</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for registration in registrations %}
+            <tr>
+                <td>{{ registration.surname }}</td>
+                <td>{{ registration.first_name }}</td>
+                <td>{{ registration.middle_name }}</td>
+                <td>{{ registration.gender }}</td>
+                <td>{{ registration.citizenship }}</td>
+                <td>{{ registration.marital_status }}</td>
+                <td>{{ registration.id_number }}</td>
+                <td>{{ registration.phone_number }}</td>
+                <td>{{ registration.email }}</td>
+                <td>{{ registration.employment_type }}</td>
+                <td>{{ registration.company_name }}</td>
+                <td>{{ registration.salary }}</td>
+                <td>{{ registration.employer_contact }}</td>
+                <td>{{ registration.business_name }}</td>
+                <td>{{ registration.business_type }}</td>
+                <td>{{ registration.business_income }}</td>
+                <td>{{ registration.next_of_kin_name }}</td>
+                <td>{{ registration.next_of_kin_phone }}</td>
+                <td>{{ registration.relationship }}</td>
+                <td><a href="{{ registration.id_upload.url }}" target="_blank">View ID</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

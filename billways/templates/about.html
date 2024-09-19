@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .header {
+            background-color: #1261A0;
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .values-section {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+        }
+
+        .value-card {
+            border: none;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .value-card .fa-icon {
+            font-size: 2.5rem;
+            color: #1261A0;
+            margin-bottom: 15px;
+        }
+
+        .value-card h5 {
+            margin-top: 10px;
+            font-size: 1.2rem;
+        }
+
+        .value-card p {
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+
+        footer {
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+        }
+
+        footer .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        footer h5 {
+            margin-bottom: 1rem;
+        }
+
+        footer ul {
+            padding-left: 0;
+        }
+
+        footer ul li {
+            list-style: none;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 767.98px) {
+            .text-md-right {
+                text-align: left !important;
+            }
+            footer .col-md-6 {
+                margin-bottom: 1rem;
+            }
+            footer .container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{% url 'home' %}">
+                    <img src="{% static 'logobill.png' %}" height="70px" width="80px" alt="Logo">
+                </a>
+               
+                </div>
+            <h1>About Us</h1>
+            <p>Learn more about our mission, vision, and core values.</p>
+        </div>
+    </header>
+
+    <section class="container mt-5">
+        <h2>Our Vision</h2>
+        <p>Developing financial products suited towards meeting customer needs and uplifting member's social economic welfare.</p>
+        <h2>Our Mission</h2>
+        <p>An epitome of financial investment with the most rewarding returns.</p>
+         <h2>Our Motto</h2>
+        <p>Together changing lives.</p>
+    </section>
+
+    <section class="values-section">
+        <div class="container">
+            <h2 class="text-center mb-5">Our Core Values</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="value-card">
+                        <i class="fas fa-balance-scale fa-icon"></i>
+                        <h5>Integrity</h5>
+                        <p>We uphold the highest standards of integrity in all of our actions.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="value-card">
+                        <i class="fas fa-eye fa-icon"></i>
+                        <h5>Transparency</h5>
+                        <p>We believe in being transparent and honest in all our dealings.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="value-card">
+                        <i class="fas fa-lightbulb fa-icon"></i>
+                        <h5>Innovation</h5>
+                        <p>We foster innovation to drive growth and create value.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="value-card">
+                        <i class="fas fa-tasks fa-icon"></i>
+                        <h5>Accountability</h5>
+                        <p>We are accountable for delivering on our commitments.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="value-card">
+                        <i class="fas fa-handshake fa-icon"></i>
+                        <h5>Trustworthy</h5>
+                        <p>We build trust by consistently delivering on our promises.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="value-card">
+                        <i class="fas fa-equals fa-icon"></i>
+                        <h5>Equity</h5>
+                        <p>We ensure fairness and equity in all our interactions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="{% url 'home' %}" class="text-white">Home</a></li>
+                        <li><a href="#" class="text-white">About</a></li>
+                        <li><a href="{% url 'savings' %}" class="text-white">Saving Product</a></li>
+                        <li><a href="{% url 'loan' %}" class="text-white">Loan Product</a></li>
+                        <li><a href="{% url 'blog_list' %}" class="text-white">blogs</a></li>
+                        <li><h3>contacts</h3></li>
+                        <li><div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+0700032800" class="text-white">0700032800</a>
+                        </div></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 text-md-right">
+                    <h5>Billways Sacco LTD</h5>
+                    <p>&copy; 2024 Billways Sacco LTD. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Include JavaScript files -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

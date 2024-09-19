@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savings Products</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .header {
+            background-color: #1261A0;
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .product-section {
+            padding: 50px 0;
+            background-color: #f8f9fa;
+        }
+
+        .product-card {
+            border: none;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-card .fa-icon {
+            font-size: 3rem;
+            color: #1261A0;
+            margin-bottom: 15px;
+        }
+
+        .product-card h5 {
+            margin-top: 10px;
+            font-size: 1.5rem;
+        }
+        .container-fluid {
+    float: left;
+}
+
+
+
+        .product-card p {
+            font-size: 1rem;
+            color: #6c757d;
+        }
+
+        footer {
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+        }
+
+        footer .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        footer h5 {
+            margin-bottom: 1rem;
+        }
+
+        footer ul {
+            padding-left: 0;
+        }
+
+        footer ul li {
+            list-style: none;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 767.98px) {
+            .text-md-right {
+                text-align: left !important;
+            }
+            footer .col-md-6 {
+                margin-bottom: 1rem;
+            }
+            footer .container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container-fluid">
+            <a class="navbar-brand"  href="{% url 'home' %}">
+                <img src="{% static 'logobill.png' %}" height="70px" width="80px" alt="Logo">
+            </a>
+           
+            </div>
+        <div class="container">
+            <h1>Savings Products</h1>
+            <p>Discover our range of savings products tailored to meet your needs.</p>
+        </div>
+    </header>
+
+    <section class="product-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="product-card">
+                        <i class="fas fa-piggy-bank fa-icon"></i>
+                        <h5>Fixed Deposits</h5>
+                        <p>Secure your future with our high-interest fixed deposit accounts.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="product-card">
+                        <i class="fas fa-child fa-icon"></i>
+                        <h5>Junior Account</h5>
+                        <p>Start saving for your child's future with our Junior Accounts.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="product-card">
+                        <i class="fas fa-users fa-icon"></i>
+                        <h5>Shared Capital Account</h5>
+                        <p>Invest in our shared capital accounts and watch your money grow.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="product-card">
+                        <i class="fas fa-user-friends fa-icon"></i>
+                        <h5>Chama Accounts</h5>
+                        <p>Empower your group savings with our Chama Accounts.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="product-card">
+                        <i class="fas fa-hands-helping fa-icon"></i>
+                        <h5>Benevolent Fund</h5>
+                        <p>Support your loved ones in times of need with our Benevolent Fund.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container py-4">
+              <div class="col-md-4">
+                  <h5>Follow Us</h5>
+                  <div class="social-media-links">
+                  <a href="https://wa.me/+254 700 032800" target="_blank">
+                      <i class="fab fa-whatsapp"></i> Chat with us 
+                  </a>
+                      <a href="https://www.facebook.com" target="_blank" class="text-white mr-3">
+                          <i class="fab fa-facebook"></i> Facebook
+                      </a>
+                      <a href="https://www.linkedin.com" target="_blank" class="text-white mr-3">
+                          <i class="fab fa-linkedin"></i> LinkedIn
+                      </a>
+                      <a href="https://www.twitter.com" target="_blank" class="text-white mr-3">
+                          <i class="fab fa-twitter"></i> Twitter
+                      </a>
+                      <a href="https://www.instagram.com" target="_blank" class="text-white mr-3">
+                          <i class="fab fa-instagram"></i> Instagram
+                      </a>
+                  </div>
+              </div>
+          <div class="quick-links">
+              <h5>Quick Links</h5>
+              <div class="contact-item"><a href="#" class="text-white">Home</a></div>
+              <div class="contact-item"><a href="{% url 'about' %}" class="text-white">About Us</a></div>
+              <div class="contact-item"><a href="{% url 'savings' %}" class="text-white">Saving Products</a></div>
+              <div class="contact-item"><a href="{% url 'loan' %}" class="text-white">Loan Products</a></div>
+             <div class="contact-item"><a href="{% url 'blog_list' %}" class="text-white">blogs</a></div>
+          </div>
+              <div>
+                  <h5>Contact Us</h5>
+                  <div class="contact-item">
+                      <i class="fas fa-map-marker-alt"></i>
+                      <span>LANGALANGA MARKET, Room 85, Nakuru,Kenya</span>
+                  </div>
+                
+                  <div class="contact-item">
+                      <i class="fas fa-phone"></i>
+                      <a href="tel:+0700032800" class="text-white">0700032800</a>
+                  </div>
+                  <div class="contact-item">
+                      <i class="fas fa-envelope"></i>
+                      <span>billwayssacco@gmail.com</span>
+                  </div>
+                  <p>&copy; 2024 Billways Sacco LTD. All rights reserved.</p>
+              </div>
+          </div>
+      </footer>
+    
+
+    <!-- Include JavaScript files -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
